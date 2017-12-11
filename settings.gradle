@@ -1,5 +1,5 @@
 rootProject.name = 'chess'
 include 'chess-lichess'
 include 'chess-core'
-include 'chess-java-ui'
+include 'chess-jvm'
 
