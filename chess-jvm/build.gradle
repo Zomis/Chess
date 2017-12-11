@@ -20,6 +20,7 @@ repositories {
 }
 
 dependencies {
+    compile project(':chess-core')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 

@@ -10,8 +10,7 @@ class MoveEngine(private val board: ChessBoard) {
 
     fun moveValid(tile: ChessTile?, pos: ChessPosition): Boolean {
         if (tile == null) {
-            return false
-            // throw new NullPointerException("tile cannot be null");
+            throw IllegalArgumentException("Tile may not be null")
         }
         when (tile.piece) {
             Piece.PAWN -> return true

@@ -27,7 +27,7 @@ class ChessPosition(val x: Int, val y: Int) {
             var move = move
             move = move.toUpperCase()
             val col = move[move.length - 2]
-            val row = move[move.length - 1].toInt()
+            val row = move[move.length - 1].toString().toInt()
             return ChessPosition(col - 'A', row - 1)
         }
     }

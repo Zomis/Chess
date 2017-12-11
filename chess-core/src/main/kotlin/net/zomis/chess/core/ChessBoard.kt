@@ -33,6 +33,8 @@ class ChessBoard {
             } else {
                 throw IllegalStateException("Unexpected number of pawns found for move " + move)
             }
+        } else {
+            throw UnsupportedOperationException("Move length not supported yet: '$move' (length ${move.length})")
         }
         if (moveEngine.moveValid(source, destination)) {
             this.move(source, destination)
@@ -92,6 +94,12 @@ class ChessBoard {
     }
 
     fun tile(pos: ChessPosition): ChessTile {
+        if (this.tiles.size < pos.y) {
+            throw IllegalArgumentException("Invalid row: ${pos.y}")
+        }
+        if (this.tiles[pos.y].size < pos.x) {
+            throw IllegalArgumentException("Invalid column: ${pos.x}")
+        }
         return this.tiles[pos.y][pos.x]
     }
 
