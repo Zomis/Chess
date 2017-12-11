@@ -1,8 +1,6 @@
-package net.zomis.chess;
+package net.zomis.chess.core;
 
 import java.util.stream.IntStream;
-
-import static net.zomis.chess.Piece.PAWN;
 
 public class ChessBoard {
 
@@ -30,7 +28,7 @@ public class ChessBoard {
                 .mapToObj(i -> new ChessPosition(destination.getX(), i))
                 .map(this::tile)
                 .filter(ch -> ch.getOwner() == current)
-                .filter(ch -> ch.getPiece() == PAWN)
+                .filter(ch -> ch.getPiece() == Piece.PAWN)
                 .collect(new UniqueCollector<>())
                 .orElseThrow(() -> new IllegalStateException("Unexpected number of pawns found for move " + move));
         }
@@ -66,8 +64,8 @@ public class ChessBoard {
     public static ChessBoard standardGame() {
         ChessBoard board = new ChessBoard();
         for (int i = 0; i < SIZE; i++) {
-            board.tile(col(i), 2).set(Player.WHITE, PAWN);
-            board.tile(col(i), SIZE - 1).set(Player.BLACK, PAWN);
+            board.tile(col(i), 2).set(Player.WHITE, Piece.PAWN);
+            board.tile(col(i), SIZE - 1).set(Player.BLACK, Piece.PAWN);
         }
 
         for (Player pl : Player.values()) {

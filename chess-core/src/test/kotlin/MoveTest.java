@@ -1,5 +1,4 @@
-package net.zomis.chess;
-
+import net.zomis.chess.core.ChessBoard;
 import org.junit.Test;
 
 public class MoveTest {

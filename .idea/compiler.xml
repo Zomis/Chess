@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="chess-core_main" target="1.8" />
       <module name="chess-core_test" target="1.8" />
+      <module name="chess-java-ui_main" target="1.8" />
+      <module name="chess-java-ui_test" target="1.8" />
       <module name="chess-lichess_main" target="1.8" />
       <module name="chess-lichess_test" target="1.8" />
       <module name="chess_main" target="1.8" />

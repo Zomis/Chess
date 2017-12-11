@@ -1,4 +1,4 @@
-package net.zomis.chess;
+package net.zomis.chess.core;
 
 import java.util.EnumSet;
 import java.util.Optional;

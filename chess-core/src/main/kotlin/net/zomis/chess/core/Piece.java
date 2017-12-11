@@ -1,4 +1,4 @@
-package net.zomis.chess;
+package net.zomis.chess.core;
 
 public enum Piece {
 
